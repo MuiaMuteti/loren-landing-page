@@ -55,9 +55,13 @@ img {
 
 /* header and main wrapper */
 .header-main-wrapper {
-    background-color: var(--primary-color);
     padding: 4rem 8rem;
     color: #fff;
+
+    background-color: var(--primary-color);
+    background-image: url('../images/dotted-bg.png');
+    background-repeat: no-repeat;
+    background-position: -6rem 0;
 }
 
 .header-main-wrapper a {
@@ -104,6 +108,12 @@ img {
     font-size: 1.8rem;
     font-weight: 600;
     padding: 0.5rem 1rem;
+}
+
+.nav a:hover,
+.nav a.active-link {
+    background-color: #fff;
+    color: var(--primary-color);
 }
 
 /* hero section */
@@ -153,6 +163,7 @@ img {
     .nav.menu-open {
         display: flex;
         flex-direction: column;
+        align-items: start;
         gap: 1rem;
     }
 }
@@ -166,6 +177,7 @@ img {
 @media screen and (max-width: 576px) {
     .header-main-wrapper {
         padding: 4rem;
+        background-position: -9rem 0;
     }
 
     .hero-text h1 {
