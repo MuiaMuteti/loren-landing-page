@@ -20,6 +20,7 @@ html {
 
 body {
     font-family: var(--font-roboto);
+    color: var(--primary-text-color);
 }
 
 h1 {
@@ -54,8 +55,13 @@ img {
 }
 
 .header-main-wrapper,
-.brands {
+.brands,
+.features {
     padding: 4rem 8rem;
+}
+
+.desc-text {
+    font-size: 1.4rem;
 }
 
 /* header and main wrapper */
@@ -155,7 +161,7 @@ img {
     justify-content: space-around;
     gap: 2rem;
 
-    background-color: #f7fafD;
+    background-color: #f7fafd;
 }
 
 .brands img {
@@ -165,6 +171,37 @@ img {
 
 .brands img:last-child {
     opacity: 1;
+}
+
+/* features section */
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 4rem;
+
+    margin-top: 4rem;
+}
+
+.feature-card {
+    padding: 4rem;
+    background-color: #f7fafd;
+    border-radius: 3rem;
+}
+
+.feature-card img {
+    display: block;
+    height: 10rem;
+    margin: auto;
+}
+
+.feature-card .feature-title {
+    font-weight: bold;
+    font-size: 2.6rem;
+    margin: 4rem 0 1rem 0;
+}
+
+.feature-card .feature-desc {
+    font-size: 1.4rem;
 }
 
 /* media queries */
@@ -201,7 +238,8 @@ img {
 @media screen and (max-width: 576px) {
 
     .header-main-wrapper,
-    .brands {
+    .brands,
+    .features {
         padding: 4rem;
     }
 
@@ -211,6 +249,10 @@ img {
 
     .hero-text h1 {
         font-size: 4rem;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
     }
 
 }
