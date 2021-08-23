@@ -57,7 +57,8 @@ img {
 .header-main-wrapper,
 .brands,
 .features,
-.services-section {
+.services-section,
+.numbers-section {
     padding: 4rem 8rem;
 }
 
@@ -73,6 +74,26 @@ img {
     font-size: 1.8rem;
 
     margin: 2rem 0 4rem 0;
+}
+
+.cta-btn {
+    font-size: 2.2rem;
+    padding: 1rem 3rem;
+    border-radius: 3rem;
+}
+
+.hero,
+.services-section,
+.numbers-section {
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+}
+
+.features,
+.services-section,
+.numbers-section {
+    margin-top: 4rem;
 }
 
 /* header and main wrapper */
@@ -138,11 +159,6 @@ img {
 /* hero section */
 .hero {
     margin: 4rem 0;
-
-    display: flex;
-    flex-direction: row;
-    gap: 4rem;
-    align-items: center;
 }
 
 .hero-text h1 {
@@ -152,12 +168,7 @@ img {
 
 .hero-text a {
     color: var(--primary-text-color);
-    font-size: 2.2rem;
     background-color: #fff;
-
-    border-radius: 3rem;
-
-    padding: 1rem 3rem;
 
     margin-top: 4rem;
 }
@@ -186,8 +197,6 @@ img {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     gap: 4rem;
-
-    margin-top: 4rem;
 }
 
 .feature-card {
@@ -214,12 +223,6 @@ img {
 
 /* services section */
 .services-section {
-    display: flex;
-    gap: 4rem;
-    align-items: center;
-
-    margin-top: 4rem;
-
     background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('../images/dotted-bg.png');
     background-repeat: no-repeat, repeat-y;
     background-position: 100% top, right -5rem top;
@@ -273,6 +276,89 @@ img {
     background-color: #fac2cf;
 }
 
+/* numbers-section */
+
+.numbers-section {
+    gap: 8rem;
+
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('../images/dotted-bg.png');
+    background-position: -6rem 0;
+    background-repeat: no-repeat;
+}
+
+.numbers-section>div {
+    flex: 1 1 0;
+}
+
+.numbers>p {
+    position: relative;
+}
+
+.numbers-desc a {
+    color: #fff;
+    background-color: var(--primary-color);
+}
+
+.numbers p {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.numbers p:nth-child(1) {
+    width: 12rem;
+    height: 12rem;
+    background-color: rgba(249, 144, 182, 0.7);
+    border-radius: 4rem;
+
+    z-index: 40;
+}
+
+.numbers p:nth-child(1) .num-val {
+    font-size: 2.5rem;
+}
+
+.numbers p:nth-child(1) .num-desc,
+.numbers p:nth-child(3) .num-desc {
+    font-size: 1.6rem;
+}
+
+.numbers p:nth-child(2),
+.numbers p:nth-child(3) {
+    width: 15rem;
+    height: 15rem;
+    border-radius: 5rem;
+}
+
+.numbers p:nth-child(2) {
+    background-color: rgba(104, 222, 240, 0.7);
+
+    margin-top: -14rem;
+    margin-left: 10rem;
+
+    z-index: 50;
+}
+
+.numbers p:nth-child(2) .num-val,
+.numbers p:nth-child(3) .num-val {
+    font-size: 3.5rem;
+}
+
+.numbers p:nth-child(2) .num-desc {
+    font-size: 2.4rem;
+}
+
+.numbers p:nth-child(3) {
+    background-color: #92bbfc;
+
+    margin-left: 4rem;
+    margin-top: -3.5rem;
+
+    z-index: 30;
+}
+
 /* media queries */
 
 @media screen and (max-width: 1024px) {
@@ -301,7 +387,8 @@ img {
 @media screen and (max-width: 768px) {
 
     .hero,
-    .services-section {
+    .services-section,
+    .numbers-section {
         flex-direction: column;
     }
 }
@@ -311,11 +398,13 @@ img {
     .header-main-wrapper,
     .brands,
     .features,
-    .services-section {
+    .services-section,
+    .numbers-section {
         padding: 4rem;
     }
 
-    .header-main-wrapper {
+    .header-main-wrapper,
+    .numbers-section {
         background-position: -9rem 0;
     }
 
