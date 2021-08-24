@@ -58,7 +58,8 @@ img {
 .brands,
 .features,
 .services-section,
-.numbers-section {
+.numbers-section,
+.blog {
     padding: 4rem 8rem;
 }
 
@@ -91,8 +92,16 @@ img {
 }
 
 .features,
+.article-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+    gap: 4rem;
+}
+
+.features,
 .services-section,
-.numbers-section {
+.numbers-section,
+.blog {
     margin-top: 4rem;
 }
 
@@ -193,11 +202,6 @@ img {
 }
 
 /* features section */
-.features {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-    gap: 4rem;
-}
 
 .feature-card {
     padding: 4rem;
@@ -359,6 +363,85 @@ img {
     z-index: 30;
 }
 
+/* blog section */
+
+.article-list {
+    margin-top: 4rem;
+}
+
+.article {
+    border-radius: 3rem;
+    border: 1px solid #ececec;
+}
+
+.article-details-wrapper {
+    padding: 2rem;
+}
+
+.blog-datetime,
+.blog-datetime .date,
+.blog-datetime .time,
+.blog-datetime .icon-wrapper {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.blog-datetime {
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.blog-datetime .icon-wrapper {
+    width: 3rem;
+    height: 3rem;
+
+    border-radius: 50%;
+}
+
+.icon-wrapper img {
+    margin: auto;
+}
+
+.date .icon-wrapper {
+    background-color: rgb(244, 221, 160, 0.4);
+}
+
+.time .icon-wrapper {
+    background-color: rgb(160, 223, 244, 0.4);
+}
+
+.blog-img-wrapper {
+    width: 100%;
+    height: 25rem;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    border-top-left-radius: 3rem;
+    border-top-right-radius: 3rem;
+}
+
+.article:nth-child(1) .blog-img-wrapper {
+    background-image: url('../images/blog1.png');
+}
+
+.article:nth-child(2) .blog-img-wrapper {
+    background-image: url('../images/blog2.png');
+}
+
+.article:nth-child(3) .blog-img-wrapper {
+    background-image: url('../images/blog3.png');
+}
+
+.blog-title {
+    font-size: 2.2rem;
+    font-weight: 600;
+
+    margin: 2rem 0;
+}
+
 /* media queries */
 
 @media screen and (max-width: 1024px) {
@@ -399,7 +482,8 @@ img {
     .brands,
     .features,
     .services-section,
-    .numbers-section {
+    .numbers-section,
+    .blog {
         padding: 4rem;
     }
 
