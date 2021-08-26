@@ -1,3 +1,7 @@
+// show current year at copyright
+let curr_yr = document.querySelector('.footer .year');
+curr_yr.textContent = new Date().getFullYear();
+
 // navigation bar functionality
 
 // reference navbar elements
