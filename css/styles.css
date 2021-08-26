@@ -54,6 +54,11 @@ img {
     height: auto;
 }
 
+button,
+input {
+    font-family: var(--font-roboto);
+}
+
 .header-main-wrapper,
 .brands,
 .features,
@@ -491,6 +496,62 @@ img {
     border-radius: 50%;
 }
 
+/* estimation section */
+.estimation {
+    margin: 15rem 15rem 4rem 6rem;
+    padding: 4rem;
+    background-color: #fcbc14;
+    border-radius: 4rem;
+
+    position: relative;
+}
+
+.estimation img {
+    position: absolute;
+    bottom: 5rem;
+    right: -11rem;
+    height: 25rem;
+}
+
+.estimation h4 {
+    color: #fff;
+}
+
+.estimation form {
+    margin-top: 2rem;
+}
+
+.estimation input,
+.estimation button {
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 3rem;
+}
+
+.estimation input {
+    color: #fffcf8;
+    font-size: 1.6rem;
+    font-weight: 500;
+    background-color: rgb(255, 255, 255, 0.2);
+}
+
+.estimation input:focus {
+    outline: none;
+}
+
+.estimation button {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #2d2e2e;
+    background-color: #fff;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.estimation button:hover {
+    background-color: rgb(255, 255, 255, 0.9);
+}
+
 /* media queries */
 
 @media screen and (max-width: 1160px) {
@@ -529,6 +590,15 @@ img {
     .services-section,
     .numbers-section {
         flex-direction: column;
+    }
+
+    .estimation {
+        margin: 4rem 6rem;
+    }
+
+    .estimation img {
+        position: static;
+        height: 15rem;
     }
 }
 
@@ -585,6 +655,10 @@ img {
         box-shadow: 0 1rem #f9f8f8;
     }
 
+    .estimation {
+        margin: 4rem;
+    }
+
 }
 
 @media screen and (max-width: 420px) {
@@ -595,5 +669,14 @@ img {
 
     .client-details .count {
         display: none;
+    }
+
+    .estimation {
+        padding: 2rem;
+        border-radius: 2rem;
+    }
+
+    .estimation input {
+        width: 100%;
     }
 }
