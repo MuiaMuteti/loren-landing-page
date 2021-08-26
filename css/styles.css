@@ -59,7 +59,8 @@ img {
 .features,
 .services-section,
 .numbers-section,
-.blog {
+.blog,
+.testimonials {
     padding: 4rem 8rem;
 }
 
@@ -85,7 +86,8 @@ img {
 
 .hero,
 .services-section,
-.numbers-section {
+.numbers-section,
+.testimonials {
     display: flex;
     gap: 4rem;
     align-items: center;
@@ -101,7 +103,8 @@ img {
 .features,
 .services-section,
 .numbers-section,
-.blog {
+.blog,
+.testimonials {
     margin-top: 4rem;
 }
 
@@ -442,7 +445,60 @@ img {
     margin: 2rem 0;
 }
 
+/* testimonial section */
+.testimonials {
+    gap: 8rem;
+}
+
+.client-list {
+    display: flex;
+    gap: 4rem;
+    flex-wrap: wrap;
+}
+
+.intro h4 {
+    margin: 2rem 0;
+}
+
+.client {
+    flex: 34rem;
+
+    padding: 4rem;
+    border-radius: 3rem;
+    box-shadow: 0px 16px 85px rgba(189, 223, 246, 0.45);
+}
+
+.client-details {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    margin-bottom: 2rem;
+}
+
+.client-details img {
+    width: 7rem;
+    border-radius: 50%;
+}
+
+.client-details .count {
+    text-align: center;
+    width: 4rem;
+    height: 4rem;
+    padding: 1rem;
+    margin-left: auto;
+    background-color: #f8f4f4;
+    border-radius: 50%;
+}
+
 /* media queries */
+
+@media screen and (max-width: 1160px) {
+    .testimonials {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
 
 @media screen and (max-width: 1024px) {
     .menu {
@@ -483,7 +539,8 @@ img {
     .features,
     .services-section,
     .numbers-section,
-    .blog {
+    .blog,
+    .testimonials {
         padding: 4rem;
     }
 
@@ -496,7 +553,8 @@ img {
         font-size: 4rem;
     }
 
-    .features {
+    .features,
+    .article-list {
         grid-template-columns: 1fr;
     }
 
@@ -527,4 +585,15 @@ img {
         box-shadow: 0 1rem #f9f8f8;
     }
 
+}
+
+@media screen and (max-width: 420px) {
+    .client-details {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .client-details .count {
+        display: none;
+    }
 }
