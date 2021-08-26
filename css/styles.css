@@ -65,7 +65,8 @@ input {
 .services-section,
 .numbers-section,
 .blog,
-.testimonials {
+.testimonials,
+.footer {
     padding: 4rem 8rem;
 }
 
@@ -498,7 +499,7 @@ input {
 
 /* estimation section */
 .estimation {
-    margin: 15rem 15rem 4rem 6rem;
+    margin: 15rem 15rem 4rem 8rem;
     padding: 4rem;
     background-color: #fcbc14;
     border-radius: 4rem;
@@ -535,6 +536,10 @@ input {
     background-color: rgb(255, 255, 255, 0.2);
 }
 
+.estimation input::placeholder {
+    color: #fffcf8;
+}
+
 .estimation input:focus {
     outline: none;
 }
@@ -550,6 +555,26 @@ input {
 
 .estimation button:hover {
     background-color: rgb(255, 255, 255, 0.9);
+}
+
+/* footer section */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 8rem;
+    background-color: #f7fafd;
+}
+
+.footer .logo span,
+.copy {
+    color: #2d2e2e;
+}
+
+.copy p {
+    font-size: 1.8rem;
+    font-weight: bold;
 }
 
 /* media queries */
@@ -593,7 +618,7 @@ input {
     }
 
     .estimation {
-        margin: 4rem 6rem;
+        margin: 4rem 8rem;
     }
 
     .estimation img {
@@ -610,7 +635,8 @@ input {
     .services-section,
     .numbers-section,
     .blog,
-    .testimonials {
+    .testimonials,
+    .footer {
         padding: 4rem;
     }
 
@@ -678,5 +704,9 @@ input {
 
     .estimation input {
         width: 100%;
+    }
+
+    .footer {
+        flex-direction: column;
     }
 }
