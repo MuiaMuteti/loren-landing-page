@@ -8,9 +8,7 @@ I am aiming to achieve a pixel perfect conversion of the UI design to a beautifu
 
 Noren Landing Page – get this awesome Sketch resource by Ghassan Hani via @sketchsources http://www.sketchappsources.com/free-source/4556-noren-landing-page-sketch-freebie-resource.html
 
-## Project status
-
-The project is still in development
+View it live at https://muiamuteti.github.io/noren-landing-page
 
 ## Contact
 
